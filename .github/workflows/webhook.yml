@@ -1,0 +1,12 @@
+name: Webhook ( use repository_dispatch)
+
+on:
+  repository_dispatch:
+    - webhook
+
+jobs:
+  respond_to_dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run a script
+        run: echo 'The event triggered is $GITHUB_EVENT_NAME'

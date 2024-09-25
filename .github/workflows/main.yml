@@ -1,0 +1,10 @@
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  printing_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo run time and hello world
+        run: echo "hello world ${date}"

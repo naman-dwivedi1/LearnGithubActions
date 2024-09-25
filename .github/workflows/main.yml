@@ -1,10 +1,12 @@
 on:
-  schedule:
-    - cron: '* * * * *'
+  push:
+    branches:
+      - main
+      - dev
 
 jobs:
-  printing_hello_world:
+  hello_world:
     runs-on: ubuntu-latest
     steps:
       - name: Echo run time and hello world
-        run: echo "hello world ${date}"
+        run: echo "hello world for push event"

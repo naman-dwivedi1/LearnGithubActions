@@ -2,7 +2,8 @@ name: Webhook ( use repository_dispatch)
 
 on:
   repository_dispatch:
-    - webhook
+    types:
+      - webhook
 
 jobs:
   respond_to_dispatch:

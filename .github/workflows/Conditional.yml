@@ -1,0 +1,19 @@
+name: Conditional Workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello:
+    if: github.repository=="naman-dwivedi1/LearnGithubActions"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing hello
+        run: echo 'hello'
+  bonjour:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing bonjour
+        run: echo 'bonjour'
+    

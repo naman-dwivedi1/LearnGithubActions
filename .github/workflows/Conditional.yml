@@ -6,7 +6,7 @@ on:
 
 jobs:
   hello:
-    if: github.repository=="naman-dwivedi1/LearnGithubActions"
+    if: github.repository == 'naman-dwivedi1/LearnGithubActions'
     runs-on: ubuntu-latest
     steps:
       - name: Printing hello
